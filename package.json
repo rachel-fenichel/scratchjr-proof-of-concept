@@ -1,0 +1,11 @@
+{
+  "name": "scratchjr-test",
+  "version": "0.0.0",
+  "description": "Playground for scratch-jr features and integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Rachel Fenichel",
+  "license": "MIT"
+}
