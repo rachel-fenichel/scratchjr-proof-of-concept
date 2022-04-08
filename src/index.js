@@ -1,23 +1,11 @@
 import * as Blockly from 'blockly';
-import { block1Json, block2Json } from './myBlocks';
+import { defsArray, blockTypes } from './blocks/myBlocks';
+import {toolbox} from './blocks/toolbox';
 
-Blockly.defineBlocksWithJsonArray([block1Json, block2Json]);
-var toolbox = {
-    "kind": "flyoutToolbox",
-    "contents": [
-      {
-        "kind": "block",
-        "type": block1Json.type
-      },
-      {
-        "kind": "block",
-        "type": block2Json.type
-      }
-    ]
-  };
+Blockly.defineBlocksWithJsonArray(defsArray);
   
 const workspace = Blockly.inject('blocklyDiv', {
     toolbox: toolbox,
     renderer: 'zelos',
-    trashcan: 'true'
+    horizontalLayout: 'true'
 });
