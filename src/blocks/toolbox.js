@@ -1,22 +1,22 @@
-import { defsArray, blockTypes } from './myBlocks';
+import { blockTypes } from './myBlocks';
 
-let contentsArr = blockTypes.map(item => {return {"kind": "block", "type": item}})
+let contentsArr = blockTypes.map(item => { return { "kind": "block", "type": item } })
 
 var toolbox = {
-  "kind": "flyoutToolbox",
-  "contents": contentsArr
-  
-  
-  // [
-  //   {
-  //     "kind": "block",
-  //     "type": block1Json.type
-  //   },
-  //   {
-  //     "kind": "block",
-  //     "type": block2Json.type
-  //   }
-  // ]
+  "kind": "categoryToolbox",
+  "contents":
+    [
+      {
+        "kind": "category",
+        "name": "Movement",
+        "contents": contentsArr
+      },
+      {
+        "kind": "category",
+        "name": "Other",
+        "contents": Array.from(contentsArr).reverse()
+      }
+    ],
 };
 
 export { toolbox };
