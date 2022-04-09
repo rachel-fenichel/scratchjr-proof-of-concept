@@ -30,10 +30,5 @@ module.exports = {
         use: ['xml-loader'],
       },
     ],
-  },
-  resolve: {
-    fallback: {
-        "util": false
-    }
-    }
+  }
 };

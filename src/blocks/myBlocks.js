@@ -38,7 +38,7 @@ function makeDef(descriptor) {
                 "alt": `${descriptor.type} arrow icon`
             }
         ],
-        "colour": 100
+        "style": "movement_blocks"
     };
 
     if (descriptor.previous) {
