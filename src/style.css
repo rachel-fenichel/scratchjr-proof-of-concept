@@ -30,3 +30,10 @@
 .blocklyTreeRow {
     height: initial;
 }
+
+.movement {
+    fill: rgb(152, 197, 233);
+}
+.events {
+    fill: #eee8bc
+}

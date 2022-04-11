@@ -9,24 +9,24 @@ var toolbox = {
       {
         "kind": "category",
         "name": "Movement",
-        "contents": contentsArr,
+        "contents": contentsArr.slice(0, 4),
         "categorystyle": "movement_category",
-        "cssConfig": {
-          "icon": "customIcon"
-        },
-        "baseIcon": "home",
-        "selectedIcon": "public"
-      },
-      {
-        "kind": "category",
-        "name": "Other",
-        "contents": Array.from(contentsArr).reverse(),
-        "categorystyle": "other_category",
         "cssConfig": {
           "icon": "customIcon"
         },
         "baseIcon": "arrow_forward",
         "selectedIcon": "arrow_back"
+      },
+      {
+        "kind": "category",
+        "name": "Events",
+        "contents": contentsArr.slice(4),
+        "categorystyle": "events_category",
+        "cssConfig": {
+          "icon": "event"
+        },
+        "baseIcon": "flag",
+        "selectedIcon": "upcoming"
       }
     ],
 };

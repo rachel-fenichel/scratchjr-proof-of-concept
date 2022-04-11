@@ -4,7 +4,7 @@ import './label.js'
 const iconSrcStrPrefix = "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/";
 const iconSrcStrSuffix = "/default/24px.svg"
 
-class CustomCategory extends Blockly.ToolboxCategory {
+export class CustomCategory extends Blockly.ToolboxCategory {
     /**
      * Constructor for a custom category.
      * @override
@@ -84,7 +84,6 @@ class CustomCategory extends Blockly.ToolboxCategory {
      */
     createIconDom_() {
         const iconImg = document.createElement('img');
-        // TODO(fenichel): Use a different icon for each category.
         iconImg.src = iconSrcStrPrefix + this.baseIcon_ + iconSrcStrSuffix;
         iconImg.alt = this.categoryName_;
         iconImg.width = '35';

@@ -3,25 +3,57 @@ const blockDescriptors = [
         type: "forward",
         image: "arrow_forward",
         previous: true,
-        next: true
+        next: true,
+        category: 'movement'
     },
     {
         type: "back",
         image: "arrow_back",
         previous: true,
-        next: true
+        next: true,
+        category: 'movement'
     },
     {
         type: "left",
         image: "arrow_left",
-        previous: false,  // Test no prev
-        next: true
+        previous: true,
+        next: true,
+        category: 'movement'
     },
     {
         type: "right",
         image: "arrow_right",
         previous: true,
-        next: false // Test no next
+        next: true,
+        category: 'movement'
+    },
+    {
+        type: "start",
+        image: "flag",
+        previous: false,
+        next: true,
+        category: 'events'
+    },
+    {
+        type: "tap",
+        image: "touch_app",
+        previous: false,
+        next: true,
+        category: 'events'
+    },
+    {
+        type: "open",
+        image: "drafts",
+        previous: true,
+        next: true,
+        category: 'events'
+    },
+    {
+        type: "send",
+        image: "forward_to_inbox",
+        previous: false,
+        next: true,
+        category: 'events'
     }
 ];
 
@@ -33,12 +65,12 @@ function makeDef(descriptor) {
             {
                 "type": "field_image",
                 "src": `https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/${descriptor.image}/default/24px.svg`,
-                "width": 50,
-                "height": 50,
-                "alt": `${descriptor.type} arrow icon`
+                "width": 40,
+                "height": 40,
+                "alt": `${descriptor.type} icon`
             }
         ],
-        "style": "movement_blocks"
+        "style": descriptor.category + "_blocks"
     };
 
     if (descriptor.previous) {
