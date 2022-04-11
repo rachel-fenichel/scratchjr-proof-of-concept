@@ -8,11 +8,6 @@ export class ScratchJrConstantsProvider extends Blockly.blockRendering.ConstantP
         super();
 
         // Override a few properties.
-        /**
-         * Rounded corner radius.
-         * @type {number}
-         * @override
-         */
         this.CORNER_RADIUS = 6;
 
         this.BLOCK_HEIGHT = 50;
@@ -26,16 +21,6 @@ export class ScratchJrConstantsProvider extends Blockly.blockRendering.ConstantP
     shapeFor(connection) {
         const checks = connection.getCheck();
         switch (connection.type) {
-            case Blockly.INPUT_VALUE:
-            case Blockly.OUTPUT_VALUE:
-                // Includes doesn't work in IE.
-                if (checks && checks.indexOf('Number') != -1) {
-                    return this.RECT_INPUT_OUTPUT;
-                }
-                if (checks && checks.indexOf('String') != -1) {
-                    return this.RECT_INPUT_OUTPUT;
-                }
-                return this.PUZZLE_TAB;
             case Blockly.PREVIOUS_STATEMENT:
             case Blockly.NEXT_STATEMENT:
                 return this.PUZZLE_TAB;
@@ -45,10 +30,12 @@ export class ScratchJrConstantsProvider extends Blockly.blockRendering.ConstantP
     }
 
     /**
- * @return {!Object} An object containing sizing and path information about
- *     puzzle tabs.
- * @package
- */
+     * /Override the puzzle tab dfeinition to make it point into the block
+     * from the left (opposite of Blockly puzzle tabs).
+     * @return {!Object} An object containing sizing and path information about
+     *     puzzle tabs.
+     * @override
+     */
     makePuzzleTab() {
         const width = this.TAB_WIDTH;
         const height = this.TAB_HEIGHT;

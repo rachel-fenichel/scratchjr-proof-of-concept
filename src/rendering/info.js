@@ -15,6 +15,7 @@ class RoundSide extends Blockly.blockRendering.Measurable {
         this.width = constants.BLOCK_HEIGHT / 2;
     }
 }
+
 export class ScratchJrRenderInfo extends Blockly.blockRendering.RenderInfo {
     constructor(renderer, block) {
         super(renderer, block);

@@ -15,11 +15,6 @@
     border-radius: 4px;
 }
 
-/* Changes color of the icon to white. */
-.customIcon {
-    color: white;
-}
-
 /* Stacks the icon on top of the label. */
 .blocklyTreeRowContentContainer {
     display: flex;
@@ -31,6 +26,7 @@
     height: initial;
 }
 
+/* Colors for the flyout background fill */
 .movement {
     fill: #61b0ff;
 }

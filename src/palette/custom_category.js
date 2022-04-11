@@ -1,5 +1,12 @@
 import * as Blockly from 'blockly'
-import './label.js'
+
+/**
+ * This file sets the appearance of the category icons in the category menu.
+ * It overrides the base definition and gets rid of the label. In it's place 
+ * there is a single icon. Each category has an icon to show normally, an
+ * icon to show when selected, and a category name.
+ * The category name corresponds to a categorystyle in theme.js.
+ */
 
 const iconSrcStrPrefix = "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/";
 const iconSrcStrSuffix = "/default/24px.svg"

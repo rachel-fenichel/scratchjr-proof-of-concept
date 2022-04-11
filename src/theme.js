@@ -2,6 +2,7 @@ import * as Blockly from 'blockly';
 
 const demoTheme = Blockly.Theme.defineTheme('demoTheme', {
     'base': Blockly.Themes.Modern,
+    // Toolbox categories.
     'categoryStyles': {
         'movement_category': {
             'colour': '#1edffc'
@@ -13,6 +14,7 @@ const demoTheme = Blockly.Theme.defineTheme('demoTheme', {
             'colour': '#da4bfa'
         }
     },
+    // Block styles.
     'blockStyles': {
         'movement_blocks': {
             'colourPrimary': '#1edffc',
