@@ -3,6 +3,7 @@ import { defsArray, blockTypes } from './blocks/myBlocks';
 import { toolbox } from './blocks/toolbox';
 import { demoTheme } from './theme';
 import { ScratchJrToolbox } from './palette/toolbox';
+import { ScratchJrRenderer } from './rendering/renderer';
 import './palette/custom_category'
 import './style.css'
 import { ScratchJrFlyout } from './palette/flyout';
@@ -11,7 +12,7 @@ Blockly.defineBlocksWithJsonArray(defsArray);
 
 const plugins = {
     'toolbox': ScratchJrToolbox,
-    'flyoutsHorizontalToolbox': ScratchJrFlyout
+    'flyoutsHorizontalToolbox': ScratchJrFlyout,
 }
 
 const moveOptions = {
@@ -30,5 +31,6 @@ const workspace = Blockly.inject('blocklyDiv', {
     theme: demoTheme,
     plugins: plugins,
     move: moveOptions,
-    trashcan: false
+    trashcan: false,
+    renderer: 'scratch_jr_renderer'
 });

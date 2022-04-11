@@ -18,6 +18,8 @@ const demoTheme = Blockly.Theme.defineTheme('demoTheme', {
         },
         'events_blocks': {
             'colourPrimary': '#fae120',
+            'colourSecondary': '#0da85b',
+            'colourTertiary': '#f2a024'
         }
     },
     'componentStyles': {
