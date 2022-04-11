@@ -54,7 +54,31 @@ const blockDescriptors = [
         previous: false,
         next: true,
         category: 'events'
-    }
+    },
+
+    {
+        type: "say",
+        image: "chat_bubble",
+        previous: true,
+        next: true,
+        category: 'looks'
+    },
+
+    {
+        type: "hide",
+        image: "directions_run",
+        previous: true,
+        next: true,
+        category: 'looks'
+    },
+
+    {
+        type: "show",
+        image: "emoji_people",
+        previous: true,
+        next: true,
+        category: 'looks'
+    },
 ];
 
 function makeDef(descriptor) {

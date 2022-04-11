@@ -7,18 +7,20 @@ import { ScratchJrRenderer } from './rendering/renderer';
 import './palette/custom_category'
 import './style.css'
 import { ScratchJrFlyout } from './palette/flyout';
+import {ContinuousMetrics} from './palette/metrics';
 
 Blockly.defineBlocksWithJsonArray(defsArray);
 
 const plugins = {
     'toolbox': ScratchJrToolbox,
     'flyoutsHorizontalToolbox': ScratchJrFlyout,
+    'metricsManager': ContinuousMetrics,
 }
 
 const moveOptions = {
     scrollbars: {
-        horizontal: false,
-        vertical: true
+        horizontal: true,
+        vertical: false
     },
     drag: true,
     wheel: false
@@ -26,7 +28,6 @@ const moveOptions = {
 
 const workspace = Blockly.inject('blocklyDiv', {
     toolbox: toolbox,
-    renderer: 'zelos',
     horizontalLayout: 'true',
     theme: demoTheme,
     plugins: plugins,

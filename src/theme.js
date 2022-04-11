@@ -8,6 +8,9 @@ const demoTheme = Blockly.Theme.defineTheme('demoTheme', {
         },
         'events_category': {
             'colour': '#fae120'
+        },
+        'looks_category': {
+            'colour': '#da4bfa'
         }
     },
     'blockStyles': {
@@ -20,10 +23,14 @@ const demoTheme = Blockly.Theme.defineTheme('demoTheme', {
             'colourPrimary': '#fae120',
             'colourSecondary': '#0da85b',
             'colourTertiary': '#f2a024'
+        },
+        'looks_blocks': {
+            'colourPrimary': '#da4bfa',
+            'colourSecondary': '#640373',
+            'colourTertiary': '#640373'
         }
     },
     'componentStyles': {
-
     }
 });
 

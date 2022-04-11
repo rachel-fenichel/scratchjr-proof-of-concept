@@ -32,8 +32,13 @@
 }
 
 .movement {
-    fill: rgb(152, 197, 233);
+    fill: #61b0ff;
 }
 .events {
-    fill: #eee8bc
+    fill: #fae34b
 }
+
+.looks {
+    fill: #dc75f3
+}
+

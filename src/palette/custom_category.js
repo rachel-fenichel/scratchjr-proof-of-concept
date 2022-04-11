@@ -75,6 +75,7 @@ export class CustomCategory extends Blockly.ToolboxCategory {
         // This is used for accessibility purposes.
         Blockly.utils.aria.setState(/** @type {!Element} */(this.htmlDiv_),
             Blockly.utils.aria.State.SELECTED, isSelected);
+
     }
 
     /**
@@ -86,8 +87,8 @@ export class CustomCategory extends Blockly.ToolboxCategory {
         const iconImg = document.createElement('img');
         iconImg.src = iconSrcStrPrefix + this.baseIcon_ + iconSrcStrSuffix;
         iconImg.alt = this.categoryName_;
-        iconImg.width = '35';
-        iconImg.height = '35';
+        iconImg.width = '45';
+        iconImg.height = '45';
         return iconImg;
     }
 }

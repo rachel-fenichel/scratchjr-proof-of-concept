@@ -20,13 +20,24 @@ var toolbox = {
       {
         "kind": "category",
         "name": "Events",
-        "contents": contentsArr.slice(4),
+        "contents": contentsArr.slice(4,8),
         "categorystyle": "events_category",
         "cssConfig": {
           "icon": "event"
         },
         "baseIcon": "flag",
         "selectedIcon": "upcoming"
+      },
+      {
+        "kind": "category",
+        "name": "Looks",
+        "contents": contentsArr.slice(8),
+        "categorystyle": "looks_category",
+        "cssConfig": {
+          "icon": "look"
+        },
+        "baseIcon": "person",
+        "selectedIcon": "face"
       }
     ],
 };
